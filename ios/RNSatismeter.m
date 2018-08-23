@@ -27,18 +27,19 @@ RCT_EXPORT_METHOD(test)
                                                                       andTraitsDictionary: traitsDictionary];
 */
 
-        NSDictionary *traitsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-                                                  @"James Bond" ,@"name",
-                                                  @"Gold", @"plan",
-                                                                                        @"2015-11-01T00:00:00.000Z", @"createdAt",
-                                                                                                                              nil];
-            
-            [[SatisMeter sharedInstance] identifyUserWithUserId: @"007"
-                                                               writeKey: @"K7eMIPEXyPMlG7fu"
-                                                                                                       andTraitsDictionary: traitsDictionary];
+    NSDictionary *traitsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+        @"James Bond" ,@"name",
+        @"Gold", @"plan",
+        @"2015-11-01T00:00:00.000Z", @"createdAt",
+        nil];
+
+    [[SatisMeter sharedInstance] identifyUserWithUserId: @"007"
+                                               writeKey: @"K7eMIPEXyPMlG7fu"
+                                   andTraitsDictionary: traitsDictionary
+    ];
 
     [[SatisMeter sharedInstance ] forceSurvey: true];
-      // Here's our method's code
+    // Here's our method's code
       RCTLogInfo(@"showImage called!");
 }
 

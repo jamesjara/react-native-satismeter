@@ -8,29 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* RNSatismeter.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNSatismeter.m */; };
-		E8F74B6A212E167700849906 /* SatisMeterResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E8FDB38D212E0FFA001A116C /* SatisMeterResources.bundle */; };
-		E8FDB38F212E0FFA001A116C /* libSatisMeter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FDB38E212E0FFA001A116C /* libSatisMeter.a */; };
+		E8F74C12212E21DE00849906 /* libSatisMeter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F74C10212E21D200849906 /* libSatisMeter.a */; };
+		E8F74C13212E21E600849906 /* SatisMeterResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E8F74C0D212E21C800849906 /* SatisMeterResources.bundle */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		58B511D91A9E6C8500147676 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNSatismeter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNSatismeter.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* RNSatismeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSatismeter.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNSatismeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSatismeter.m; sourceTree = "<group>"; };
-		E8FDB38D212E0FFA001A116C /* SatisMeterResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SatisMeterResources.bundle; path = SatisMeter/SatisMeterResources.bundle; sourceTree = "<group>"; };
-		E8FDB38C212E0FF9001A116C /* SatisMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SatisMeter.h; path = SatisMeter/SatisMeter.h; sourceTree = "<group>"; };
-		E8FDB38E212E0FFA001A116C /* libSatisMeter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSatisMeter.a; path = SatisMeter/libSatisMeter.a; sourceTree = "<group>"; };
+		E8F74C0A212E20F900849906 /* libSatisMeter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSatisMeter.a; sourceTree = "<group>"; };
+		E8F74C0D212E21C800849906 /* SatisMeterResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SatisMeterResources.bundle; sourceTree = "<group>"; };
+		E8F74C0E212E21C800849906 /* SatisMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SatisMeter.h; sourceTree = "<group>"; };
+		E8F74C10212E21D200849906 /* libSatisMeter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSatisMeter.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8FDB38F212E0FFA001A116C /* libSatisMeter.a in Frameworks */,
+				E8F74C12212E21DE00849906 /* libSatisMeter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,13 +45,22 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				E8FDB38E212E0FFA001A116C /* libSatisMeter.a */,
-				E8FDB38C212E0FF9001A116C /* SatisMeter.h */,
-				E8FDB38D212E0FFA001A116C /* SatisMeterResources.bundle */,
+				E8F74C10212E21D200849906 /* libSatisMeter.a */,
+				E8F74C0E212E21C800849906 /* SatisMeter.h */,
+				E8F74C0D212E21C800849906 /* SatisMeterResources.bundle */,
 				B3E7B5881CC2AC0600A0062D /* RNSatismeter.h */,
 				B3E7B5891CC2AC0600A0062D /* RNSatismeter.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				E8F74C09212E20F800849906 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		E8F74C09212E20F800849906 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8F74C0A212E20F900849906 /* libSatisMeter.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,10 +70,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNSatismeter" */;
 			buildPhases = (
-				58B511D71A9E6C8500147676 /* Sources */,
-				58B511D81A9E6C8500147676 /* Frameworks */,
-				58B511D91A9E6C8500147676 /* CopyFiles */,
 				E8F74B69212E166F00849906 /* Resources */,
+				58B511D81A9E6C8500147676 /* Frameworks */,
+				58B511D71A9E6C8500147676 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -122,7 +119,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8F74B6A212E167700849906 /* SatisMeterResources.bundle in Resources */,
+				E8F74C13212E21E600849906 /* SatisMeterResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,13 +229,12 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SatisMeter",
+					"$(PROJECT_DIR)",
 				);
-                OTHER_LDFLAGS = (
-                        "-ObjC",
-                        "-l\"SatisMeter\"",
-                        "-framework",
-                        "\"UIKit\"",
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					"\"UIKit\"",
 				);
 				PRODUCT_NAME = RNSatismeter;
 				SKIP_INSTALL = YES;
@@ -256,14 +252,13 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SatisMeter",
+					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = (
-                        "-ObjC",
-                        "-l\"SatisMeter\"",
-                        "-framework",
-                        "\"UIKit\"",
-                );
+					"-ObjC",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_NAME = RNSatismeter;
 				SKIP_INSTALL = YES;
 			};
