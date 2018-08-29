@@ -1,9 +1,6 @@
-
 #import "RNSatismeter.h"
 #import "RCTLog.h"
 #import "SatisMeter.h"
-
-
 
 @implementation RNSatismeter
 
@@ -13,34 +10,29 @@
 }
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(test)
+RCT_EXPORT_METHOD(setKey: (NSString *) key)
 {
-/*
-    NSDictionary *traitsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-                                         @"James Bond" ,@"name",
-                                         @"Gold", @"plan",
-                                                                          @"2015-11-01T00:00:00.000Z", @"createdAt",
-                                                                                                           nil];
+ _key = key; 
+}
 
-    [[SatisMeter sharedInstance] identifyUserWithUserId: @"007"
-                                     writeKey: @"K7eMIPEXyPMlG7fu"
-                                                                      andTraitsDictionary: traitsDictionary];
-*/
+RCT_EXPORT_METHOD(setUserId: (NSString *) userid)
+{
+ _userid = userid;
+}
 
-    NSDictionary *traitsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-        @"James Bond" ,@"name",
-        @"Gold", @"plan",
-        @"2015-11-01T00:00:00.000Z", @"createdAt",
-        nil];
+RCT_EXPORT_METHOD(setUserTraits: (NSDictionary *) traits)
+{
+  _traits = traits;
+}
 
-    [[SatisMeter sharedInstance] identifyUserWithUserId: @"007"
-                                               writeKey: @"K7eMIPEXyPMlG7fu"
-                                   andTraitsDictionary: traitsDictionary
+RCT_EXPORT_METHOD(run: (BOOL) force)
+{
+    [[SatisMeter sharedInstance] identifyUserWithUserId: _userid
+                                               writeKey: _key
+                                   andTraitsDictionary: _traits 
     ];
 
-    [[SatisMeter sharedInstance ] forceSurvey: true];
-    // Here's our method's code
-      RCTLogInfo(@"showImage called!");
+    [[SatisMeter sharedInstance ] forceSurvey: force];
 }
 
 @end
