@@ -9,6 +9,10 @@
 
 `$ react-native link react-native-satismeter`
 
+### Remember to link iOS bundle 
+Link the bundle iOS file by adding it in the copy bundle section, search
+node_modules/react-native-satismeter/ios/*.bundle and add it.
+
 ### Manual installation
 
 
@@ -39,7 +43,15 @@
 ```javascript
 import RNSatismeter from 'react-native-satismeter';
 
-// TODO: What to do with the module?
-RNSatismeter;
-```
-  
+RNSatismeter.setKey("your-api-key")
+RNSatismeter.setUserId("your-user-id")
+RNSatismeter.setUserTraits({
+  date: "01-01-1990",
+  color: "red",
+  foo: "bar"
+})
+
+// Bool to force the survey
+RNSatismeter.run(false)
+
+```  
