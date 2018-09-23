@@ -1,6 +1,7 @@
 
 # react-native-satismeter
 
+
 ## Getting started
 
 `$ npm install react-native-satismeter --save`
