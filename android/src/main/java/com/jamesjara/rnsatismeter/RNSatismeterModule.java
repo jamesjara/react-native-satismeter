@@ -47,7 +47,7 @@ public class RNSatismeterModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void run(){
+  public void run(boolean force){
     final Activity activity = getCurrentActivity();
     HashMap<String, Object> trait = new HashMap();
     
