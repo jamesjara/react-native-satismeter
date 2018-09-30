@@ -60,7 +60,7 @@ public class RNSatismeterModule extends ReactContextBaseJavaModule {
 	    }
     }
    
-    SatisMeter.identify(activity, this.key, "jamesjara@gmail.com" , trait);
+    SatisMeter.identify(activity, this.key, this.userid , trait);
     // @TODO implement forceSurvey Method
   }
 }
