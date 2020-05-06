@@ -1,17 +1,33 @@
 {
   "name": "react-native-satismeter",
-  "version": "1.0.4",
-  "description": "",
+  "title": "React Native Satismeter",
+  "version": "2.0.0",
+  "description": "React Native Satismeter",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/React-Native-Nation/react-native-satismeter.git",
+    "baseUrl": "https://github.com/React-Native-Nation/react-native-satismeter"
+  },
   "keywords": [
     "react-native"
   ],
-  "author": "",
-  "license": "",
+  "author": {
+    "name": "jamesjara",
+    "email": "jamesjara@gmail.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
   "peerDependencies": {
-    "react-native": "^0.41.2"
+    "react": "^16.8.1",
+    "react-native": ">=0.60.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "react": "^16.9.0",
+    "react-native": "^0.61.5"
   }
 }

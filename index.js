@@ -1,6 +1,5 @@
-
 import { NativeModules } from 'react-native';
 
-const { RNSatismeter } = NativeModules;
+const { Satismeter } = NativeModules;
 
-export default RNSatismeter;
+export default Satismeter;
